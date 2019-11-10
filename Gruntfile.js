@@ -95,6 +95,21 @@ module.exports = function(grunt) {
       },
     },
 
+    tdevopsui5_server: {
+      test: {
+        options: {
+          remoteServer: 'https://pslint-e.one-erp.telekom.de',
+          remoteUrlPrefix: '/sap',
+          user: '16534277',
+          pwd: '4=NMB,Pm',
+          localPort: '3025',
+          // resources
+          ui5resources: 'C:\\SAPUI5\\1.52.13\\resources',
+          appSource: 'test/source',
+        },
+      },
+    },
+
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js'],
@@ -120,6 +135,8 @@ module.exports = function(grunt) {
     'tdevopsui5_deploy:gus',
     'nodeunit',
   ]);
+
+  grunt.registerTask('server', ['tdevopsui5_server']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['eslint']);
