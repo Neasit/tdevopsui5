@@ -1,0 +1,25 @@
+<mvc:View
+  controllerName="pslint.appid.controller.StartPage"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  height="100%"
+>
+  <Page
+    showHeader="true"
+    title="{i18n>appTitle}"
+    showFooter="false"
+    showNavButton="false"
+    backgroundDesign="Solid"
+  >
+    <headerContent>
+      <Button
+        icon="sap-icon://menu2"
+        type="Transparent"
+        press="onLangPress"
+      />
+    </headerContent>
+    <content>
+    </content>
+  </Page>
+</mvc:View>

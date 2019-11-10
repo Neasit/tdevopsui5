@@ -1,0 +1,43 @@
+<!-- Deprecated -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+
+    <title>GlobalTemplate</title>
+
+    <script
+      id="sap-ui-bootstrap"
+      src="../../resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-theme="sap_belize"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-preload="async"
+      data-sap-ui-resourceroots='{"pslint.appid": "",
+                                "tsystems.rus.custom": "../zui5customlibs/tsystems/rus/custom",
+                                "tsystems.rus.redefined.m": "../zui5redeflib/tsystems/rus/redefined/m"
+      }'
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script>
+      sap.ui.getCore().attachInit(function() {
+        sap.ui.require(['sap/m/Shell', 'sap/ui/core/ComponentContainer'], function(
+          Shell,
+          ComponentContainer
+        ) {
+          // initialize the UI component
+          new Shell({
+            app: new ComponentContainer({
+              height: '100%',
+              name: 'pslint.appid',
+            }),
+          }).placeAt('content');
+        });
+      });
+    </script>
+  </head>
+
+  <body class="sapUiBody" id="content"></body>
+</html>
