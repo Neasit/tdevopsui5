@@ -1,7 +1,7 @@
 {
   "name": "grunt-tdevopsui5",
   "description": "UI5 tools for build/deploy/version managment of ui5 applicaton",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "https://github.com/Neasit/tdevopsui5",
   "author": {
     "name": "Neasit",
@@ -14,12 +14,7 @@
   "bugs": {
     "url": "https://github.com/Neasit/tdevopsui5/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/Neasit/tdevopsui5/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "engines": {
     "node": ">= 8.5.0"
   },
