@@ -1,8 +1,8 @@
 # grunt-tdevopsui5
 
-Grunt tasks for build/deploy/version managment of ui5 applicaton
-It's just small workaroud to reduce gruntfile in project
-the tasks: 
+Grunt tasks for build/deploy/version management of ui5 application
+It's just small workaround to reduce gruntfile in project
+the tasks:
 
 - build (preload, js/css mini, resources, cachebooster-file, dbg files);
 
@@ -102,7 +102,7 @@ grunt.initConfig({
         server: 'https://sapgwpsl.t-systems.ru:4443',
         client: '200',
         useStrictSSL: false,
-        // credentional
+        // credential
         user: '*********',
 
         pwd: '*********',
