@@ -83,7 +83,7 @@ module.exports = function(grunt) {
           dest: 'test/dist',
           src: 'test/src',
           // server info
-          server: 'https://sapgwpsl.t-systems.ru:4443',
+          server: 'https://***',
           client: '200',
           useStrictSSL: false,
           // credentional
@@ -98,10 +98,10 @@ module.exports = function(grunt) {
     tdevopsui5_server: {
       test: {
         options: {
-          remoteServer: 'https://pslint-e.one-erp.telekom.de',
+          remoteServer: 'https://***',
           remoteUrlPrefix: '/sap',
-          user: '16534277',
-          pwd: '4=NMB,Pm',
+          user: '***',
+          pwd: '***',
           localPort: '3025',
           // resources
           ui5resources: 'C:\\SAPUI5\\1.52.13\\resources',

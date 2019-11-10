@@ -10,6 +10,8 @@ the tasks:
 
 - version (custom file to manage version in ABAP server);
 
+- server (simple HTTP server to run webapp (UI5) with proxy to SAP Backend)
+
 ```javascript
 // version file example
 {
@@ -99,7 +101,7 @@ grunt.initConfig({
         dest: 'test/dist',
         src: 'test/src',
         // server info
-        server: 'https://sapgwpsl.t-systems.ru:4443',
+        server: 'https://***:4443',
         client: '200',
         useStrictSSL: false,
         // credential
@@ -109,6 +111,21 @@ grunt.initConfig({
 
         // version
         version: 'P', // 'D', 'P', 'M'
+      },
+    },
+  },
+
+  tdevopsui5_server: {
+    test: {
+      options: {
+        remoteServer: 'https://*****',
+        remoteUrlPrefix: '/sap',
+        user: '***',
+        pwd: '***',
+        localPort: '3025',
+        // resources
+        ui5resources: 'C:\\SAPUI5\\1.52.13\\resources',
+        appSource: 'test/source',
       },
     },
   },
