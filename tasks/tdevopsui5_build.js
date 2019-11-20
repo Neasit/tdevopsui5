@@ -147,6 +147,10 @@ module.exports = function(grunt) {
 
     // copy builded libs to resources
     if (options.library && options.lib_to_resources) {
+      utils.extendGrunt(grunt, 'grunt-contrib-copy', {
+        'copy.resourcesLib': oCopyOptions.resourcesLib,
+      });
+
       aTasks.push('copy:resourcesLib');
     }
 
