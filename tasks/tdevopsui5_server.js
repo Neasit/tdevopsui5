@@ -24,6 +24,8 @@ module.exports = function(grunt) {
       // resources
       ui5resources: null,
       appSource: null,
+      firstResources: null,
+      firstResourcesPath: null,
     });
 
     if (
@@ -38,6 +40,13 @@ module.exports = function(grunt) {
     var app = express();
 
     app.use(serveStatic(options.appSource));
+
+    if (options.firstResources) {
+      app.use(
+        options.firstResources,
+        serveStatic(options.firstResourcesPath, { fallthrough: false })
+      );
+    }
 
     app.use('/resources', serveStatic(options.ui5resources));
 
