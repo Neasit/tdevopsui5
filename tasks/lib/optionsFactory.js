@@ -239,7 +239,7 @@ function createJSMiniOptions(oOptions) {
           {
             expand: true,
             cwd: oOptions.tmp,
-            src: ['**/*.js', '!**/*preload.js', '!**/*-dbg*'],
+            src: ['**/*.js', '!**/*preload.js', '!**/*.min.js', '!**/*-dbg*'],
             dest: oOptions.tmp,
           },
         ],
@@ -335,7 +335,7 @@ function createCopyOptions(oOptions) {
           {
             expand: true,
             cwd: oOptions.tmp,
-            src: ['**/*.*', '!libs/*.*', '!**/*-preload.js'],
+            src: ['**/*.*', '!libs/*.*', '!**/*.min.js', '!**/*-preload.js'],
             dest: oOptions.tmp,
             rename: function(dest, src) {
               // this.js -> this-dbg.js
