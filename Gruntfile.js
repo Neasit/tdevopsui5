@@ -81,7 +81,7 @@ module.exports = function(grunt) {
           calc_appindex: true,
           // folder
           dest: 'test/dist',
-          src: 'test/src',
+          src: '**/*.*',
           // server info
           server: 'https://***',
           client: '200',

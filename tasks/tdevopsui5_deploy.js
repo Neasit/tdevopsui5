@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       calc_appindex: true,
       // folder
       dest: 'dist',
-      src: 'src',
+      src: '**/*.*',
       // server info
       server: null,
       client: null,

@@ -107,7 +107,7 @@ function createUploaderOptions(oOptions) {
           },
           resources: {
             cwd: oOptions.dest,
-            src: '**/*.*',
+            src: oOptions.src,
           },
         },
       },
