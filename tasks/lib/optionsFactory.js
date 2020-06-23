@@ -239,7 +239,7 @@ function createJSMiniOptions(oOptions) {
           {
             expand: true,
             cwd: oOptions.tmp,
-            src: ['**/*.js', '!**/*preload.js', '!**/*.min.js', '!**/*-dbg*'],
+            src: ['**/*.js', '!**/*preload.js', '!**/*.min.js', '!**/*-min.js', '!**/*-dbg*'],
             dest: oOptions.tmp,
           },
         ],
