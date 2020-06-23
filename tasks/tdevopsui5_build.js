@@ -38,6 +38,7 @@ module.exports = function(grunt) {
       // folders
       appName: 'TEST',
       src: 'src',
+      preloadFiles: ['**', '**/.*'],
       dest: 'dist',
       tmp: 'tmp',
       ui5Resource: 'C:/SAPUI5/1.52.13/resources',

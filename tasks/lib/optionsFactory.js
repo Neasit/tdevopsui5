@@ -265,7 +265,7 @@ function createPreloadOptions(oOptions) {
             resources: {
               cwd: oOptions.tmp,
               prefix: oOptions.appIndex,
-              src: ['**', '**/.*'],
+              src: oOptions.preloadFiles,
             },
             dest: oOptions.tmp,
             compatVersion: oOptions.ui5version,
@@ -277,7 +277,7 @@ function createPreloadOptions(oOptions) {
             resources: {
               cwd: oOptions.tmp,
               prefix: oOptions.appIndex,
-              src: ['**', '**/.*'],
+              src: oOptions.preloadFiles,
             },
             dest: oOptions.tmp,
             compatVersion: oOptions.ui5version,
@@ -292,6 +292,7 @@ function createPreloadOptions(oOptions) {
             resources: {
               cwd: oOptions.tmp,
               prefix: oOptions.appIndex,
+              src: oOptions.preloadFiles,
             },
             dest: oOptions.tmp,
             compatVersion: oOptions.ui5version,
