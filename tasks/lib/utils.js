@@ -16,9 +16,16 @@ var process = require('process');
 module.exports = {
   // type = 'D' - develop, 'M' - maitenence, 'P' - production
   addVersion: function(grunt, src, type, TR, user, note, hash) {
+    var manifestPath = path.relative(process.cwd(), src) + '/manifest.json';
+    var oManifest;
     var fileName = 'version.json';
     var filePath = path.relative(process.cwd(), src) + '/' + fileName;
     var sData = '{}';
+    if (fs.existsSync(filePath)) {
+      sData = fs.readFileSync(manifestPath, { encoding: 'utf-8' });
+      oManifest = JSON.parse(sData);
+      sData = '{}';
+    }
     if (fs.existsSync(filePath)) {
       sData = fs.readFileSync(filePath, { encoding: 'utf-8' });
     }
@@ -78,6 +85,13 @@ module.exports = {
       hash: hash,
     };
     fs.writeFileSync(filePath, JSON.stringify(oVersion));
+    if (oManifest && oManifest['sap.app']) {
+      if (!oManifest['sap.app'].applicationVersion) {
+        oManifest['sap.app'].applicationVersion = {};
+      }
+      oManifest['sap.app'].applicationVersion.version = sNewVersion;
+      fs.writeFileSync(manifestPath, JSON.stringify(oManifest));
+    }
     return sNewVersion;
   },
 

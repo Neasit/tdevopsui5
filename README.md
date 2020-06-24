@@ -143,4 +143,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-_(Nothing yet)_
+ - 0.1.9: Version task - history is deprecated; added changing manifest.json (sap.app - applicationVersion)
