@@ -21,6 +21,7 @@ module.exports = function(grunt) {
       user: null,
       pwd: null,
       localPort: '3017',
+      secure: false,
       // resources
       ui5resources: null,
       appSource: null,
@@ -56,6 +57,7 @@ module.exports = function(grunt) {
         proxy({
           target: options.remoteServer,
           changeOrigin: true,
+          secure: options.secure,
           auth: options.user + ':' + options.pwd,
           onProxyRes: function(proxyRes) {
             var sPath = 'path=/';
