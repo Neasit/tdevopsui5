@@ -5,3 +5,4 @@ test/dist
 test/src
 test/temp
 ./package-lock.json
+package-lock.json
