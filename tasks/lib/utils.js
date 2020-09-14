@@ -84,13 +84,13 @@ module.exports = {
       note: note || 'empty',
       hash: hash,
     };
-    fs.writeFileSync(filePath, JSON.stringify(oVersion));
+    fs.writeFileSync(filePath, JSON.stringify(oVersion, null, 2));
     if (oManifest && oManifest['sap.app']) {
       if (!oManifest['sap.app'].applicationVersion) {
         oManifest['sap.app'].applicationVersion = {};
       }
       oManifest['sap.app'].applicationVersion.version = sNewVersion;
-      fs.writeFileSync(manifestPath, JSON.stringify(oManifest));
+      fs.writeFileSync(manifestPath, JSON.stringify(oManifest, null, 2));
     }
     return sNewVersion;
   },

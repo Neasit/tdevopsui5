@@ -1,7 +1,7 @@
 {
   "name": "grunt-tdevopsui5",
   "description": "UI5 tools for build/deploy/version managment of ui5 applicaton",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "homepage": "https://github.com/Neasit/tdevopsui5",
   "author": {
     "name": "Neasit",
